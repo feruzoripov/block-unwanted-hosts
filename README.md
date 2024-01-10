@@ -16,12 +16,33 @@ More info: https://en.wikipedia.org/wiki/Shock_site
 
 ## Features
 
-- Fetches and blocks websites from specified URLs.
+- Fetches and blocks websites from predefined [sources](https://github.com/feruzoripov/block-unwanted-hosts/tree/main?tab=readme-ov-file#blocked-websites-sources).
 - Appends entries to the hosts file - `/etc/hosts`.
-- Checks for duplicates to avoid redundancy.
+- Clears the DNS cache to apply changes immediately.
 
-## Installation
+## Usage
 
+To block unwanted hosts, import the `github.com/feruzoripov/block-unwanted-hosts/internal/app/blocking` package in your Go code and call `blocking.FetchAndBlockWebsites()`.
+
+```Go
+package main
+
+import (
+	"log"
+
+	"github.com/feruzoripov/block-unwanted-hosts/internal/app/blocking"
+)
+
+func main() {
+	err := blocking.FetchAndBlockWebsites()
+	if err != nil {
+		log.Fatal("Error: ", err)
+	}
+}
+```
+__Note__: Ensure that you have the necessary permissions to update the hosts file, and you may need to run the tool with administrative privileges (`sudo`).
+
+## Command Line Usage
 ### Prerequisites
 
 - `Go` installed
@@ -33,7 +54,7 @@ More info: https://en.wikipedia.org/wiki/Shock_site
 
    ```bash
    git clone https://github.com/feruzoripov/block-unwanted-hosts.git
-   cd block-unwanted-hosts
+   cd block-unwanted-hosts/cmd
    ```
 2. Build:
 
@@ -45,6 +66,18 @@ More info: https://en.wikipedia.org/wiki/Shock_site
    ```bash
    sudo ./blocking
    ```
+
+## Supported Operating Systems
+
+`Block Unwanted Hosts` is designed to run on the following operating systems:
+
+- macOS
+- Debian-based Linux (e.g., Ubuntu)
+
+Please note that these are the currently supported operating systems. While it may work on other Linux distributions, the tool has been tested and optimized for macOS and Debian-based systems.
+
+If you encounter any issues on a different operating system, feel free to [submit an issue](https://github.com/feruzoripov/block-unwanted-hosts/issues) or contribute to improve compatibility.
+
 
 ## Licence
 
