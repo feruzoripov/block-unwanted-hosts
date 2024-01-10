@@ -1,15 +1,15 @@
-# Project Name
+# Block Unwanted Hosts
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://github.com/feruzoripov/block-unwanted-hosts/actions/workflows/go.yml/badge.svg)](https://github.com/feruzoripov/block-unwanted-hosts/actions/workflows/go.yml)
 
-Brief description of your project.
+`Block Unwanted Hosts` is an open-source Go application designed to block unwanted websites by updating the system's hosts file. It fetches a list of blocked websites from various sources and appends them to the hosts file, effectively preventing access to these sites.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- ...
+- Fetches and blocks websites from specified URLs.
+- Appends entries to the hosts file - `/etc/hosts`.
+- Checks for duplicates to avoid redundancy.
 
 ## Installation
 
@@ -22,5 +22,6 @@ Brief description of your project.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
-   cd yourproject
+   git clone https://github.com/feruzoripov/block-unwanted-hosts.git
+   cd block-unwanted-hosts
+   ```
