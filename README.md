@@ -24,7 +24,8 @@ More info: https://en.wikipedia.org/wiki/Shock_site
 
 ### Prerequisites
 
-- Go 1.2 or later
+- `Go` installed
+- `git` installed
 
 ### Installation Steps
 
@@ -39,10 +40,10 @@ More info: https://en.wikipedia.org/wiki/Shock_site
    ```bash
    go build -o blocking
    ```
-3. Run:
+3. Run (requires `sudo` for updating `/etc/hosts` and clearing DNS cache):
 
    ```bash
-   ./blocking
+   sudo ./blocking
    ```
 
 ## Licence
